@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Agendamento de Defesa</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Formulário de Agendamento de Defesa</h1>
+		
+		<form id="bancas">
+            <!-- Seção 1: Dados Gerais -->
+            <h2>DADOS GERAIS</h2>
+            
+            <div class="form-group">
+                <label for="tipo_banca">Tipo de Banca:</label>
+                <select id="tipo_banca" name="tipo_banca" required>
+                    <option value="">Selecione...</option>
+                    <option value="Qualificação de Mestrado">Qualificação de Mestrado</option>
+					<option value="Mudança de Nível">Mudança de Nível</option>
+                    <option value="Defesa Final de Mestrado">Defesa Final de Mestrado</option>
+                    <option value="Qualificação de Doutorado">Qualificação de Doutorado</option>
+                    <option value="Defesa Prévia de Doutorado">Defesa Prévia de Doutorado</option>
+					<option value="Defesa Final de Doutorado">Defesa Final de Doutorado</option>
+                </select>
+
+            <div class="form-group">
+                <label for="titulo">Título do Trabalho:</label>
+                <textarea id="titulo" name="titulo" required></textarea>
+            </div>
+
+            <!-- Seção 2: Dados do Estudante -->
+            <h2>DADOS DO(A) ESTUDANTE</h2>
+            
+            <div class="form-group">
+                <label for="estudante">Nome Completo:</label>
+                <input type="text" id="estudante" name="estudante" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="matricula">Matrícula:</label>
+                    <input type="text" id="matricula" name="matricula" required>
+                </div>
+                <div class="form-col">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            
+            <!-- Seção 3: Dados da Banca -->
+            <h2>DADOS DA BANCA</h2>
+            
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="data">Data proposta:</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+                <div class="form-col">
+                    <label for="hora">Horário:</label>
+                    <input type="time" id="hora" name="hora" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Recursos necessários:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="projetor" name="recursos" value="Projetor">
+                        <label for="projetor">Projetor</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="computador" name="recursos" value="Computador">
+                        <label for="computador">Computador</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="internet" name="recursos" value="Internet">
+                        <label for="internet">Internet</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="outros" name="recursos" value="Outros">
+                        <label for="outros">Outros</label>
+                    </div>
+                </div>
+             <button type="submit" class="submit-btn">Enviar Solicitação</button>
+        </form>           
+	</div>
+
+</body>
+</html>
